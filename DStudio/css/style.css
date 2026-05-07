@@ -1,9 +1,9 @@
 /* ===================================================
-   T1B-3 DIGITAL STUDIO — CSS v2.0 (MELHORADO)
+   T1B-3 DIGITAL STUDIO — CSS 
    Mantém identidade visual original + novas features
    =================================================== */
 
-/* ---------- BASE ---------- */
+/* BASE */
 :root {
     --brand-dark: #111111;
     --brand-accent: #5ab9ea;
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     line-height: 1.2;
 }
 
-/* ---------- BOTÕES ---------- */
+/* BOTÕES  */
 .btn-custom {
     background-color: var(--brand-dark);
     color: #fff;
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     color: var(--brand-dark);
 }
 
-/* ---------- NAVBAR ---------- */
+/* NAVBAR  */
 .navbar {
     background-color: rgba(17, 17, 17, 0.96);
     transition: all 0.3s ease;
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
 .dropdown-item:hover { background-color: #2a2a2a; }
 
-/* ---------- HERO CAROUSEL ---------- */
+/* HERO CARROSEL */
 #heroCarousel { height: 100vh; }
 
 .carousel-inner, .carousel-item { height: 100%; }
@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     color: #fff;
 }
 
-/* Carousel controls */
+/* CARROSEL CONTROLS */
 .carousel-control-prev,
 .carousel-control-next {
     width: 60px;
@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* ---------- SERVICES BAR ---------- */
+/* SERVICES BAR  */
 .services-bar {
     background-color: #050505;
     color: white;
@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 .service-box:hover .service-icon { color: var(--brand-accent); }
 .service-box:hover h6 { color: #fff; }
 
-/* ---------- SOBRE + TABS ---------- */
+/* SOBRE + TABS */
 .about-image-wrapper {
     position: relative;
     padding-right: 30px;
@@ -400,7 +400,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     min-height: 80px;
 }
 
-/* ---------- SERVIÇOS ---------- */
+/* SERVIÇOS  */
 .service-card-detailed {
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border-radius: 0 !important;
@@ -477,7 +477,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     font-family: 'Space Mono', monospace;
 }
 
-/* ---------- DEPOIMENTOS ---------- */
+/* DEPOIMENTOS  */
 .testimonial-card {
     border-left: 4px solid var(--brand-mint);
     position: relative;
@@ -511,7 +511,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     color: var(--brand-dark);
 }
 
-/* ---------- PORTFÓLIO ---------- */
+/* PORTFÓLIO  */
 .portfolio-filters {
     display: flex;
     justify-content: center;
@@ -608,7 +608,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 .portfolio-grid-item { transition: opacity 0.4s ease, transform 0.4s ease; }
 .portfolio-grid-item.hidden { opacity: 0; transform: scale(0.95); pointer-events: none; display: none; }
 
-/* ---------- ESTATÍSTICAS ---------- */
+/*  ESTATÍSTICAS  */
 .stats-section {
     background-color: #000 !important;
     padding: 100px 0;
@@ -653,7 +653,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
 .stat-card:hover .stat-label { color: #aaa; }
 
-/* ---------- TRUST ---------- */
+/*  TRUST  */
 .trust-badges {
     display: flex;
     flex-direction: column;
@@ -675,7 +675,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     color: var(--brand-accent);
 }
 
-/* ---------- EQUIPE ---------- */
+/* EQUIPE  */
 .team-member { text-align: center; }
 
 .team-img-wrapper {
@@ -720,7 +720,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 .team-member:hover .team-social { opacity: 1; }
 .team-member:hover .team-img-wrapper img { transform: scale(1.03); }
 
-/* ---------- QUOTE SECTION ---------- */
+/* QUOTE SECTION */
 .quote-section {
     background: linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
                 url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80') center fixed;
@@ -729,7 +729,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     text-align: center;
 }
 
-/* ---------- BLOG ---------- */
+/* BLOG  */
 .blog-tabs .nav-link {
     color: #666 !important;
     border: none;
@@ -816,7 +816,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
 .blog-read-more:hover { gap: 12px; color: var(--brand-accent); }
 
-/* ---------- FAQ ---------- */
+/* FAQ  */
 .faq-accordion .accordion-item {
     border: none;
     border-bottom: 1px solid #eee;
@@ -848,13 +848,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; }
     line-height: 1.7;
 }
 
-/* ---------- CTA ---------- */
+/* CTA */
 .cta-banner {
     background-color: var(--brand-mint);
     padding: 60px 0;
 }
 
-/* ---------- FOOTER ---------- */
+/* OOTER */
 footer {
     background-color: #fff;
     padding: 80px 0 20px;
@@ -897,7 +897,7 @@ footer {
 
 .bi-geo-alt, .bi-telephone, .bi-envelope { color: var(--brand-accent) !important; }
 
-/* ---------- BACK TO TOP ---------- */
+/* BACK TO TOP  */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -927,7 +927,7 @@ footer {
     color: var(--brand-dark);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero-title { font-size: 2.5rem; }
     .hero-lead { font-size: 0.9rem; }
