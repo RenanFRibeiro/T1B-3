@@ -6,23 +6,18 @@
     <title>T1B-3 Digital Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <script src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark py-3">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4" href="#">
-                <i> <img src="images/t1b.png" alt="T1B-3" style="width: 90px; height: auto;" > </i>
+                <img src="images/t1b.png" alt="T1B-3" style="width: 90px; height: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -31,60 +26,159 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#servicos" role="button" data-bs-toggle="dropdown">Serviços</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#servicos">Desenvolvimento Web</a></li>
+                            <li><a class="dropdown-item" href="#servicos">Criação de Wireframes</a></li>
+                            <li><a class="dropdown-item" href="#servicos">Manutenção & Suporte</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#servicos">SEO & Marketing</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
-            <div class="d-none d-lg-flex align-items-center">
-                <a href="#" class="text-white me-3"><i class="bi bi-search"></i></a>
-                <a href="#" class="text-white fs-4"><i class="bi bi-list"></i></a>
+            <div class="d-none d-lg-flex align-items-center gap-3">
+                <a href="#contato" class="btn btn-custom btn-sm">Fale Conosco</a>
             </div>
         </div>
     </nav>
-   
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <p class="hero-subtitle text-uppercase">Bem-vindo à nossa agência</p>
-                    <h1>T1B-3<br>DIGITAL STUDIO</h1>
-                    <p class="lead mb-5">Projetamos produtos digitais que ajudam a expandir negócios.<br>Trabalhamos com marcas globais entregando experiências excepcionais.</p>
+
+    <!-- ===================== HERO CAROUSEL ===================== -->
+    <section id="inicio">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-slide slide-1">
+                        <div class="hero-overlay"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center justify-content-center text-center">
+                                <div class="col-lg-10">
+                                    <p class="hero-tag animate-tag">Bem-vindo à nossa agência</p>
+                                    <h1 class="hero-title animate-title">T1B-3<br><span>DIGITAL STUDIO</span></h1>
+                                    <p class="hero-lead animate-lead">Projetamos produtos digitais que ajudam a expandir negócios.<br>Trabalhamos com marcas globais entregando experiências excepcionais.</p>
+                                    <div class="hero-actions animate-actions">
+                                        <a href="#portfolio" class="btn btn-hero-primary me-3">Ver Portfólio</a>
+                                        <a href="#contato" class="btn btn-hero-outline">Fale Conosco</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-slide slide-2">
+                        <div class="hero-overlay"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center">
+                                <div class="col-lg-7">
+                                    <p class="hero-tag">Nossas Especialidades</p>
+                                    <h1 class="hero-title">DESENVOLVIMENTO<br><span>WEB DE ELITE</span></h1>
+                                    <p class="hero-lead">Sites de alta performance, SEO técnico e design centrado no usuário. Construímos ferramentas de escala para o seu negócio crescer.</p>
+                                    <a href="#servicos" class="btn btn-hero-primary">Conhecer Serviços</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-slide slide-3">
+                        <div class="hero-overlay"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center justify-content-end text-end">
+                                <div class="col-lg-7">
+                                    <p class="hero-tag">Nossa Equipe</p>
+                                    <h1 class="hero-title">PESSOAS QUE<br><span>FAZEM ACONTECER</span></h1>
+                                    <p class="hero-lead">Uma equipe multidisciplinar de desenvolvedores, designers e estrategistas prontos para transformar a sua visão em realidade digital.</p>
+                                    <a href="#equipe" class="btn btn-hero-primary">Conhecer a Equipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span></span>
+                <p>Scroll</p>
             </div>
         </div>
     </section>
 
+    <!-- ===================== SERVICES BAR ===================== -->
     <section class="services-bar text-center">
         <div class="container">
             <div class="row g-4">
                 <div class="col-6 col-md-3 service-box">
                     <i class="bi bi-lightbulb service-icon"></i>
-                    <h6 class="text-uppercase mb-0 mt-3" style="font-size: 12px; letter-spacing: 1px;">Estratégia Digital</h6>
+                    <h6 class="text-uppercase mb-0 mt-3">Estratégia Digital</h6>
                 </div>
                 <div class="col-6 col-md-3 service-box">
                     <i class="bi bi-laptop service-icon"></i>
-                    <h6 class="text-uppercase mb-0 mt-3" style="font-size: 12px; letter-spacing: 1px;">Desenvolvimento Web</h6>
+                    <h6 class="text-uppercase mb-0 mt-3">Desenvolvimento Web</h6>
                 </div>
                 <div class="col-6 col-md-3 service-box">
                     <i class="bi bi-phone service-icon"></i>
-                    <h6 class="text-uppercase mb-0 mt-3" style="font-size: 12px; letter-spacing: 1px;">Design de Aplicativos</h6>
+                    <h6 class="text-uppercase mb-0 mt-3">Design de Aplicativos</h6>
                 </div>
                 <div class="col-6 col-md-3 service-box">
                     <i class="bi bi-rocket service-icon"></i>
-                    <h6 class="text-uppercase mb-0 mt-3" style="font-size: 12px; letter-spacing: 1px;">Marketing e SEO</h6>
+                    <h6 class="text-uppercase mb-0 mt-3">Marketing e SEO</h6>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===================== SOBRE ===================== -->
     <section id="sobre" class="section-padding bg-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
-                    <p class="text-muted text-uppercase" style="letter-spacing: 2px; font-size: 12px;">Bem-vindo à agência T1B-3 Digital Studio</p>
-                    <h2 class="display-6 fw-bold mb-4">SOMOS UMA AGÊNCIA DE WEBSITES.</h2>
-                    <p class="text-muted mb-4">Nossa equipe foca na entrega de projetos de alta qualidade e performance. Combinamos design focado no usuário, tecnologia de ponta e estratégias de marketing para impulsionar seus resultados no meio digital. Desenvolvemos soluções sob medida que encantam e convertem.</p>
+                    <p class="section-overtitle">Bem-vindo à agência T1B-3 Digital Studio</p>
+                    <h2 class="section-title">SOMOS UMA AGÊNCIA DE WEBSITES.</h2>
+                    <p class="text-muted mb-4">Nossa equipe foca na entrega de projetos de alta qualidade e performance. Combinamos design focado no usuário, tecnologia de ponta e estratégias de marketing para impulsionar seus resultados no meio digital.</p>
+                    <p class="text-muted mb-5">Desenvolvemos soluções sob medida que encantam e convertem, sempre com transparência e comprometimento total com o seu sucesso.</p>
+                    <!-- Tabs Sobre -->
+                    <ul class="nav nav-tabs about-tabs mb-4" id="aboutTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#missao">Missão</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#visao">Visão</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#valores">Valores</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content about-tab-content mb-5">
+                        <div class="tab-pane fade show active" id="missao">
+                            <p class="text-muted mb-0">Desenvolver soluções digitais que gerem valor real para nossos parceiros, combinando criatividade, tecnologia e estratégia para resultados mensuráveis.</p>
+                        </div>
+                        <div class="tab-pane fade" id="visao">
+                            <p class="text-muted mb-0">Ser a agência de referência em desenvolvimento web no Brasil, reconhecida pela excelência técnica e pelo impacto positivo nos negócios dos nossos clientes.</p>
+                        </div>
+                        <div class="tab-pane fade" id="valores">
+                            <p class="text-muted mb-0">Transparência, inovação contínua, comprometimento com prazos e qualidade acima de tudo. Acreditamos que o sucesso do cliente é o nosso sucesso.</p>
+                        </div>
+                    </div>
                     <a href="#contato" class="btn btn-custom">Saber Mais</a>
                 </div>
                 <div class="col-lg-6">
@@ -96,134 +190,96 @@
         </div>
     </section>
 
-    <!-- Serviço -->
-
+    <!-- ===================== SERVIÇOS ===================== -->
     <section id="servicos" class="section-padding bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <p class="text-muted text-uppercase mb-2" style="letter-spacing: 2px; font-size: 12px;">Nossas Especialidades</p>
-            <h2 class="fw-bold">SOLUÇÕES SOB MEDIDA</h2>
-            <p class="text-muted mx-auto" style="max-width: 700px;">A gente não faz apenas sites. A gente constrói ferramentas de escala com tecnologia de ponta e foco total na experiência do seu cliente.</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 shadow-sm service-card-detailed p-4">
-                    <div class="card-body">
-                        <div class="icon-box-service mb-3"><i class="bi bi-code-square"></i></div>
-                        <h4 class="fw-bold mb-3">Desenvolvimento de Sites</h4>
-                        <p class="text-muted small mb-4">Sites exclusivos com <strong>design responsivo</strong> e performance extrema. Focamos em <strong>otimização para mecanismos de busca (SEO)</strong> para que sua marca seja encontrada por quem importa.</p>
-                        <button class="btn btn-custom w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="setService('Desenvolvimento de Sites')">Contratar Agora</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 shadow-sm service-card-detailed p-4">
-                    <div class="card-body">
-                        <div class="icon-box-service mb-3"><i class="bi bi-layers"></i></div>
-                        <h4 class="fw-bold mb-3">Criação de Wireframes</h4>
-                        <p class="text-muted small mb-4">A arquitetura da informação levada a sério. Desenhamos a jornada do usuário em protótipos detalhados para validar sua ideia antes de mover uma linha de código.</p>
-                        <button class="btn btn-custom w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="setService('Criação de Wireframes')">Solicitar Projeto</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 shadow-sm service-card-detailed p-4">
-                    <div class="card-body">
-                        <div class="icon-box-service mb-3"><i class="bi bi-shield-check"></i></div>
-                        <h4 class="fw-bold mb-3">Manutenção Completa</h4>
-                        <p class="text-muted small mb-4">Segurança e estabilidade. Oferecemos <strong>suporte ao cliente</strong> contínuo, com atualizações de segurança e backups diários para que você nunca fique na mão.</p>
-                        <button class="btn btn-custom w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="setService('Manutenção Completa')">Garantir Suporte</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section-padding bg-white border-top">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4">
-                <h2 class="fw-bold mb-4">O QUE DIZEM NOSSOS PARCEIROS</h2>
-                <p class="text-muted">A satisfação de quem confia no nosso código é o que move a T1B-3.</p>
-            </div>
-            <div class="col-lg-8">
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="testimonial-card p-4 bg-light">
-                            <p class="fst-italic text-muted mb-3">"A equipe de desenvolvimento superou todas as expectativas. O site ficou rápido e o suporte pós-entrega é impecável."</p>
-                            <h6 class="fw-bold mb-0">Pablo Henrique</h6>
-                            <span class="small text-muted">CEO - MIRAI TECH</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="testimonial-card p-4 bg-light">
-                            <p class="fst-italic text-muted mb-3">"Os wireframes nos ajudaram a entender o produto final e economizaram meses de retrabalho. Profissionais de elite!"</p>
-                            <h6 class="fw-bold mb-0">Guilherme</h6>
-                            <span class="small text-muted">Gerente de Produto - 3AG </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="portfolio" class="section-padding bg-light text-center">
         <div class="container">
-            <p class="text-muted text-uppercase mb-2" style="letter-spacing: 2px; font-size: 12px;">Nosso Portfólio</p>
-            <h2 class="fw-bold mb-5">APRESENTAÇÃO DE TRABALHOS</h2>
-            
+            <div class="text-center mb-5">
+                <p class="section-overtitle">Nossas Especialidades</p>
+                <h2 class="section-title">SOLUÇÕES SOB MEDIDA</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">A gente não faz apenas sites. A gente constrói ferramentas de escala com tecnologia de ponta e foco total na experiência do seu cliente.</p>
+            </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        
-                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Projeto 1">
-                        <div class="portfolio-overlay">
-                            <a href="projeto1.html" target="_blank" class="text-white fs-1"><i class="bi bi-link-45deg"></i></a>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm service-card-detailed p-4">
+                        <div class="card-body">
+                            <div class="icon-box-service mb-3"><i class="bi bi-code-square"></i></div>
+                            <h4 class="fw-bold mb-3">Desenvolvimento de Sites</h4>
+                            <p class="text-muted small mb-4">Sites exclusivos com <strong>design responsivo</strong> e performance extrema. Focamos em <strong>otimização para mecanismos de busca (SEO)</strong> para que sua marca seja encontrada por quem importa.</p>
+                            <ul class="service-feature-list mb-4">
+                                <li><i class="bi bi-check2"></i> Design Responsivo</li>
+                                <li><i class="bi bi-check2"></i> Otimização SEO</li>
+                                <li><i class="bi bi-check2"></i> Performance Máxima</li>
+                            </ul>
+                            <button class="btn btn-custom w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="setService('Desenvolvimento de Sites')">Contratar Agora</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Projeto 2">
-                        <div class="portfolio-overlay">
-                            <a href="projeto2.html" target="_blank" class="text-white fs-1"><i class="bi bi-link-45deg"></i></a>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm service-card-detailed service-card-featured p-4">
+                        <div class="featured-badge">Popular</div>
+                        <div class="card-body">
+                            <div class="icon-box-service mb-3"><i class="bi bi-layers"></i></div>
+                            <h4 class="fw-bold mb-3">Criação de Wireframes</h4>
+                            <p class="text-muted small mb-4">A arquitetura da informação levada a sério. Desenhamos a jornada do usuário em protótipos detalhados para validar sua ideia antes de mover uma linha de código.</p>
+                            <ul class="service-feature-list mb-4">
+                                <li><i class="bi bi-check2"></i> Prototipagem UX/UI</li>
+                                <li><i class="bi bi-check2"></i> Jornada do Usuário</li>
+                                <li><i class="bi bi-check2"></i> Validação Rápida</li>
+                            </ul>
+                            <button class="btn btn-custom w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="setService('Criação de Wireframes')">Solicitar Projeto</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" alt="Projeto 3">
-                        <div class="portfolio-overlay">
-                            <a href="projeto3.html" target="_blank" class="text-white fs-1"><i class="bi bi-link-45deg"></i></a>
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm service-card-detailed p-4">
+                        <div class="card-body">
+                            <div class="icon-box-service mb-3"><i class="bi bi-shield-check"></i></div>
+                            <h4 class="fw-bold mb-3">Manutenção Completa</h4>
+                            <p class="text-muted small mb-4">Segurança e estabilidade. Oferecemos <strong>suporte ao cliente</strong> contínuo, com atualizações de segurança e backups diários para que você nunca fique na mão.</p>
+                            <ul class="service-feature-list mb-4">
+                                <li><i class="bi bi-check2"></i> Backups Diários</li>
+                                <li><i class="bi bi-check2"></i> Atualizações de Segurança</li>
+                                <li><i class="bi bi-check2"></i> Suporte Contínuo</li>
+                            </ul>
+                            <button class="btn btn-custom w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal" onclick="setService('Manutenção Completa')">Garantir Suporte</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Projeto 4">
-                        <div class="portfolio-overlay">
-                            <a href="projeto4.html" target="_blank" class="text-white fs-1"><i class="bi bi-link-45deg"></i></a>
+            </div>
+
+            <!-- Processo de Trabalho (nova seção dentro de serviços) -->
+            <div class="process-section mt-5 pt-5">
+                <div class="text-center mb-5">
+                    <p class="section-overtitle">Como Trabalhamos</p>
+                    <h3 class="fw-bold">NOSSO PROCESSO</h3>
+                </div>
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <div class="process-step">
+                            <div class="process-number">01</div>
+                            <h5 class="fw-bold mt-3">Briefing</h5>
+                            <p class="text-muted small">Entendemos a fundo seus objetivos, público-alvo e desafios do projeto.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="Projeto 5">
-                        <div class="portfolio-overlay">
-                            <a href="projeto5.html" target="_blank" class="text-white fs-1"><i class="bi bi-link-45deg"></i></a>
+                    <div class="col-md-3">
+                        <div class="process-step">
+                            <div class="process-number">02</div>
+                            <h5 class="fw-bold mt-3">Planejamento</h5>
+                            <p class="text-muted small">Arquitetura da solução, wireframes e definição do stack tecnológico.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Projeto 6">
-                        <div class="portfolio-overlay">
-                            <a href="projeto6.html" target="_blank" class="text-white fs-1"><i class="bi bi-link-45deg"></i></a>
+                    <div class="col-md-3">
+                        <div class="process-step">
+                            <div class="process-number">03</div>
+                            <h5 class="fw-bold mt-3">Desenvolvimento</h5>
+                            <p class="text-muted small">Codificação ágil com entregas parciais e validações constantes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="process-step process-step-last">
+                            <div class="process-number">04</div>
+                            <h5 class="fw-bold mt-3">Lançamento</h5>
+                            <p class="text-muted small">Deploy, testes finais e suporte pós-lançamento para garantir sucesso.</p>
                         </div>
                     </div>
                 </div>
@@ -231,49 +287,201 @@
         </div>
     </section>
 
-    <section class="stats-section fade-in">
-    <div class="container">
-        <div class="row g-4 text-center">
-            
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="6">5</span><span class="plus">+</span>
-                    </div>
-                    <p class="stat-label">Projetos Concluídos</p>
+    <!-- ===================== DEPOIMENTOS ===================== -->
+    <section class="section-padding bg-white border-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <p class="section-overtitle">Resultados Reais</p>
+                    <h2 class="section-title">O QUE DIZEM NOSSOS PARCEIROS</h2>
+                    <p class="text-muted">A satisfação de quem confia no nosso código é o que move a T1B-3.</p>
                 </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="94">100</span><span class="plus">%</span>
+                <div class="col-lg-8">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="testimonial-card p-4 bg-light">
+                                            <div class="testimonial-stars mb-2">★★★★★</div>
+                                            <p class="fst-italic text-muted mb-3">"A equipe de desenvolvimento superou todas as expectativas. O site ficou rápido e o suporte pós-entrega é impecável."</p>
+                                            <h6 class="fw-bold mb-0">Pablo Henrique</h6>
+                                            <span class="small text-muted">CEO - MIRAI TECH</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-card p-4 bg-light">
+                                            <div class="testimonial-stars mb-2">★★★★★</div>
+                                            <p class="fst-italic text-muted mb-3">"Os wireframes nos ajudaram a entender o produto final e economizaram meses de retrabalho. Profissionais de elite!"</p>
+                                            <h6 class="fw-bold mb-0">Guilherme</h6>
+                                            <span class="small text-muted">Gerente de Produto - 3AG</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="testimonial-card p-4 bg-light">
+                                            <div class="testimonial-stars mb-2">★★★★★</div>
+                                            <p class="fst-italic text-muted mb-3">"O resultado final superou nossas expectativas de conversão. O investimento se pagou em menos de dois meses."</p>
+                                            <h6 class="fw-bold mb-0">Ana Costa</h6>
+                                            <span class="small text-muted">Diretora - NOVA SOLUÇÕES</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-card p-4 bg-light">
+                                            <div class="testimonial-stars mb-2">★★★★☆</div>
+                                            <p class="fst-italic text-muted mb-3">"Equipe altamente responsiva e comprometida. O projeto foi entregue antes do prazo e com qualidade impecável."</p>
+                                            <h6 class="fw-bold mb-0">Felipe Torres</h6>
+                                            <span class="small text-muted">CTO - ALPHA DIGITAL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start mt-4 gap-2">
+                            <button class="btn btn-sm testimonial-nav-btn" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
+                            <button class="btn btn-sm testimonial-nav-btn" data-bs-target="#testimonialCarousel" data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <p class="stat-label">Clientes Satisfeitos</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="2">2</span>
-                    </div>
-                    <p class="stat-label">Prêmios Ganhos</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="stat-card">
-                    <div class="stat-number-wrapper">
-                        <span class="stat-number" data-target="2">2</span>
-                    </div>
-                    <p class="stat-label">Anos de Experiência</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- ===================== PORTFÓLIO ===================== -->
+    <section id="portfolio" class="section-padding bg-light text-center">
+        <div class="container">
+            <p class="section-overtitle">Nosso Portfólio</p>
+            <h2 class="section-title">APRESENTAÇÃO DE TRABALHOS</h2>
+
+            <!-- Filtros -->
+            <div class="portfolio-filters mb-5">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </div>
+
+            <div class="row g-4" id="portfolioGrid">
+                <div class="col-md-4 portfolio-grid-item" data-category="web">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Projeto 1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-cat">Web</span>
+                                <h5>E-commerce Premium</h5>
+                                <a href="projeto1.html" target="_blank" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-grid-item" data-category="design">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Projeto 2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-cat">Design</span>
+                                <h5>Branding & Identidade</h5>
+                                <a href="projeto2.html" target="_blank" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-grid-item" data-category="web">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=800&q=80" alt="Projeto 3">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-cat">Web</span>
+                                <h5>Dashboard Analytics</h5>
+                                <a href="projeto3.html" target="_blank" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-grid-item" data-category="marketing">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Projeto 4">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-cat">Marketing</span>
+                                <h5>Campanha Digital</h5>
+                                <a href="projeto4.html" target="_blank" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-grid-item" data-category="web">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Projeto 5">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-cat">Web</span>
+                                <h5>Portal Imobiliário</h5>
+                                <a href="projeto5.html" target="_blank" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-grid-item" data-category="design">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Projeto 6">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-cat">Design</span>
+                                <h5>App Mobile UI</h5>
+                                <a href="projeto6.html" target="_blank" class="portfolio-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ESTATÍSTICAS ===================== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="6">0</span><span class="plus">+</span>
+                        </div>
+                        <p class="stat-label">Projetos Concluídos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="94">0</span><span class="plus">%</span>
+                        </div>
+                        <p class="stat-label">Clientes Satisfeitos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="2">0</span>
+                        </div>
+                        <p class="stat-label">Prêmios Ganhos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="2">0</span>
+                        </div>
+                        <p class="stat-label">Anos de Experiência</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TRUST ===================== -->
     <section class="section-padding bg-white">
         <div class="container">
             <div class="row align-items-center">
@@ -281,50 +489,89 @@
                     <img src="./images/Equipe/Conexoes.png" alt="Reunião Cliente" class="img-fluid shadow">
                 </div>
                 <div class="col-lg-5 offset-lg-1">
-                    <h2 class="display-6 fw-bold mb-4">SOMOS UMA EMPRESA DE CONFIANÇA.</h2>
+                    <p class="section-overtitle">Nossa Filosofia</p>
+                    <h2 class="section-title">SOMOS UMA EMPRESA DE CONFIANÇA.</h2>
                     <p class="text-muted mb-4">Construímos relacionamentos duradouros através de entregas consistentes, transparência e suporte incondicional ao crescimento dos nossos parceiros.</p>
+                    <div class="trust-badges mb-5">
+                        <div class="trust-item"><i class="bi bi-clock-history"></i> Suporte 24/7</div>
+                        <div class="trust-item"><i class="bi bi-patch-check"></i> Qualidade Garantida</div>
+                        <div class="trust-item"><i class="bi bi-graph-up-arrow"></i> Resultados Mensuráveis</div>
+                    </div>
                     <a href="#contato" class="btn btn-custom">Saber Mais</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding bg-light text-center">
+    <!-- ===================== EQUIPE ===================== -->
+    <section id="equipe" class="section-padding bg-light text-center">
         <div class="container">
-            <p class="text-muted text-uppercase mb-2" style="letter-spacing: 2px; font-size: 12px;">Conheça a Equipe</p>
-            <h2 class="fw-bold mb-5">PESSOAS ESPECIALISTAS</h2>
-            
-            <div class="row g-4 justify-content-center">
-                <div class="col-6 col-md-3 team-member">
-                    <img src="images/Equipe/Renan.png" alt="Renan">
-                    <h5 class="fw-bold mt-3 mb-0">RENAN</h5>
-                    <p class="text-muted small">Desenvolvedor</p>
+            <p class="section-overtitle">Conheça a Equipe</p>
+            <h2 class="section-title">PESSOAS ESPECIALISTAS</h2>
+            <div class="row g-4 justify-content-center mt-2">
+                <div class="col-6 col-md-3">
+                    <div class="team-member">
+                        <div class="team-img-wrapper">
+                            <img src="images/Equipe/Renan.png" alt="Renan">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mt-3 mb-0">RENAN</h5>
+                        <p class="text-muted small">Desenvolvedor</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 team-member">
-                    <img src="images/Equipe/Gabriel.png" alt="Gabriel">
-                    <h5 class="fw-bold mt-3 mb-0">GABRIEL</h5>
-                    <p class="text-muted small">Especialista SEO</p>
+                <div class="col-6 col-md-3">
+                    <div class="team-member">
+                        <div class="team-img-wrapper">
+                            <img src="images/Equipe/Gabriel.png" alt="Gabriel">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mt-3 mb-0">GABRIEL</h5>
+                        <p class="text-muted small">Especialista SEO</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 team-member">
-                    <img src="images/Equipe/Murilo.png" alt="Murilo">
-                    <h5 class="fw-bold mt-3 mb-0">MURILO</h5>
-                    <p class="text-muted small">Designer UI/UX</p>
+                <div class="col-6 col-md-3">
+                    <div class="team-member">
+                        <div class="team-img-wrapper">
+                            <img src="images/Equipe/Murilo.png" alt="Murilo">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-behance"></i></a>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mt-3 mb-0">MURILO</h5>
+                        <p class="text-muted small">Designer UI/UX</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 team-member">
-                    <img src="images/Equipe/Igor.png" alt="Igor">
-                    <h5 class="fw-bold mt-3 mb-0">IGOR</h5>
-                    <p class="text-muted small">Gerente de Projetos</p>
+                <div class="col-6 col-md-3">
+                    <div class="team-member">
+                        <div class="team-img-wrapper">
+                            <img src="images/Equipe/Igor.png" alt="Igor">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold mt-3 mb-0">IGOR</h5>
+                        <p class="text-muted small">Gerente de Projetos</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===================== QUOTE ===================== -->
     <section class="quote-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="mb-4">
-                        <span class="bg-dark text-dark px-3 py-2 fs-4"> <img src="images/Equipe.png" alt=""> </span>
+                        <span class="bg-dark text-dark px-3 py-2 fs-4"><img src="images/Equipe.png" alt=""></span>
                     </div>
                     <h2 class="fw-bold lh-base">ACREDITAMOS QUE GRANDES RESULTADOS NASCEM DA UNIÃO ENTRE PESSOAS COMPROMETIDAS, IDEIAS INOVADORAS E A <span style="color: #bce0d5;">BUSCA CONSTANTE PELA EXCELÊNCIA</span> EM TUDO O QUE FAZEMOS.</h2>
                 </div>
@@ -332,44 +579,216 @@
         </div>
     </section>
 
-    <section class="section-padding bg-white">
+    <!-- ===================== BLOG ===================== -->
+    <section id="blog" class="section-padding bg-white">
         <div class="container">
             <div class="text-center mb-5">
-                <p class="text-muted text-uppercase mb-2" style="letter-spacing: 2px; font-size: 12px;">Departamento de Artigos</p>
-                <h2 class="fw-bold">POSTS MAIS RECENTES</h2>
+                <p class="section-overtitle">Departamento de Artigos</p>
+                <h2 class="section-title">POSTS MAIS RECENTES</h2>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card blog-card h-100">
-                        <img src="./images/redes.png" class="card-img-top" alt="Blog 1">
-                        <div class="card-body p-4">
-                            <span class="badge bg-dark mb-2">Design</span>
-                            <h5 class="card-title fw-bold">Redes Sociais Para Administrar Uma Agência Web</h5>
-                            <p class="card-text text-muted small mt-3">Descubra as melhores ferramentas para gerenciar suas mídias sociais e alavancar o seu alcance digital.</p>
-                            <a href="#" class="text-dark text-uppercase small fw-bold text-decoration-none">Ler Mais <i class="bi bi-arrow-right"></i></a>
+
+            <!-- Tabs Blog -->
+            <ul class="nav nav-tabs blog-tabs mb-5" id="blogTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#todos">Todos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#design-tab">Design</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#marketing-tab">Marketing</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dev-tab">Desenvolvimento</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="todos">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <div class="blog-img-wrapper">
+                                    <img src="./images/redes.png" class="card-img-top" alt="Blog 1">
+                                    <span class="blog-category-tag">Design</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="blog-meta mb-2">
+                                        <span><i class="bi bi-calendar3"></i> Jan 2026</span>
+                                        <span><i class="bi bi-clock"></i> 5 min</span>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Redes Sociais Para Administrar Uma Agência Web</h5>
+                                    <p class="card-text text-muted small mt-3">Descubra as melhores ferramentas para gerenciar suas mídias sociais e alavancar o seu alcance digital.</p>
+                                    <a href="#" class="blog-read-more">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <div class="blog-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 2">
+                                    <span class="blog-category-tag">Marketing</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="blog-meta mb-2">
+                                        <span><i class="bi bi-calendar3"></i> Fev 2026</span>
+                                        <span><i class="bi bi-clock"></i> 7 min</span>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Torne-se o Melhor Profissional de Vendas</h5>
+                                    <p class="card-text text-muted small mt-3">Técnicas essenciais de conversão e negociação para transformar leads frios em clientes fiéis.</p>
+                                    <a href="#" class="blog-read-more">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <div class="blog-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 3">
+                                    <span class="blog-category-tag">Desenvolvimento</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="blog-meta mb-2">
+                                        <span><i class="bi bi-calendar3"></i> Mar 2026</span>
+                                        <span><i class="bi bi-clock"></i> 6 min</span>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Apresentando os Recursos Incríveis do T1B-3</h5>
+                                    <p class="card-text text-muted small mt-3">Uma visão detalhada sobre a arquitetura e tecnologias que utilizamos para escalar projetos complexos.</p>
+                                    <a href="#" class="blog-read-more">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card blog-card h-100">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 2">
-                        <div class="card-body p-4">
-                            <span class="badge bg-dark mb-2">Marketing</span>
-                            <h5 class="card-title fw-bold">Torne-se o Melhor Profissional de Vendas</h5>
-                            <p class="card-text text-muted small mt-3">Técnicas essenciais de conversão e negociação para transformar leads frios em clientes fieis.</p>
-                            <a href="#" class="text-dark text-uppercase small fw-bold text-decoration-none">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                <div class="tab-pane fade" id="design-tab">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <div class="blog-img-wrapper">
+                                    <img src="./images/redes.png" class="card-img-top" alt="Blog Design">
+                                    <span class="blog-category-tag">Design</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="blog-meta mb-2">
+                                        <span><i class="bi bi-calendar3"></i> Jan 2026</span>
+                                        <span><i class="bi bi-clock"></i> 5 min</span>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Redes Sociais Para Administrar Uma Agência Web</h5>
+                                    <p class="card-text text-muted small mt-3">Descubra as melhores ferramentas para gerenciar suas mídias sociais e alavancar o seu alcance digital.</p>
+                                    <a href="#" class="blog-read-more">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card blog-card h-100">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog 3">
-                        <div class="card-body p-4">
-                            <span class="badge bg-dark mb-2">Desenvolvimento</span>
-                            <h5 class="card-title fw-bold">Apresentando os Recursos Incríveis do T1B-3</h5>
-                            <p class="card-text text-muted small mt-3">Uma visão detalhada sobre a arquitetura e tecnologias que utilizamos para escalar projetos complexos.</p>
-                            <a href="#" class="text-dark text-uppercase small fw-bold text-decoration-none">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                <div class="tab-pane fade" id="marketing-tab">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <div class="blog-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog Marketing">
+                                    <span class="blog-category-tag">Marketing</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="blog-meta mb-2">
+                                        <span><i class="bi bi-calendar3"></i> Fev 2026</span>
+                                        <span><i class="bi bi-clock"></i> 7 min</span>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Torne-se o Melhor Profissional de Vendas</h5>
+                                    <p class="card-text text-muted small mt-3">Técnicas essenciais de conversão e negociação para transformar leads frios em clientes fiéis.</p>
+                                    <a href="#" class="blog-read-more">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="dev-tab">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <div class="blog-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Blog Dev">
+                                    <span class="blog-category-tag">Desenvolvimento</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="blog-meta mb-2">
+                                        <span><i class="bi bi-calendar3"></i> Mar 2026</span>
+                                        <span><i class="bi bi-clock"></i> 6 min</span>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Apresentando os Recursos Incríveis do T1B-3</h5>
+                                    <p class="card-text text-muted small mt-3">Uma visão detalhada sobre a arquitetura e tecnologias que utilizamos para escalar projetos complexos.</p>
+                                    <a href="#" class="blog-read-more">Ler Mais <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-custom">Ver Todos os Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <p class="section-overtitle">Dúvidas Frequentes</p>
+                    <h2 class="section-title">PERGUNTAS E RESPOSTAS</h2>
+                    <p class="text-muted">Respondemos as dúvidas mais comuns sobre nosso processo, prazos e metodologia de trabalho.</p>
+                    <a href="#contato" class="btn btn-custom mt-4">Fazer uma Pergunta</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Quanto tempo leva para desenvolver um site?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Depende da complexidade do projeto. Sites institucionais simples levam de 2 a 4 semanas. E-commerces e plataformas mais robustas podem levar de 6 a 12 semanas. Definimos o prazo no briefing inicial.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Vocês oferecem suporte após a entrega?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Sim! Oferecemos planos de manutenção mensal com atualizações de segurança, backups diários e suporte técnico prioritário. Nosso compromisso vai além da entrega.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Como funciona o processo de pagamento?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Trabalhamos com entrada de 50% no início do projeto e o restante na entrega final. Para projetos maiores, podemos negociar um parcelamento personalizado.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Vocês trabalham com clientes de qualquer segmento?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Sim! Já atendemos clientes de tecnologia, gastronomia, imobiliário, saúde, moda e muito mais. Nossa metodologia se adapta ao contexto de cada negócio.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -377,11 +796,13 @@
         </div>
     </section>
 
+    <!-- ===================== CTA ===================== -->
     <section id="contato" class="cta-banner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8 text-center text-md-start mb-4 mb-md-0">
                     <h2 class="fw-bold mb-0 text-dark">VAMOS COMEÇAR O SEU PROJETO!</h2>
+                    <p class="text-dark mb-0 mt-2 opacity-75">Entre em contato e receba um orçamento sem compromisso.</p>
                 </div>
                 <div class="col-md-4 text-center text-md-end">
                     <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#contactModal">Fale Conosco</button>
@@ -390,13 +811,13 @@
         </div>
     </section>
 
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <!-- ===================== MODAL CONTATO ===================== -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 rounded-0">
-                <div class="modal-header bg-dark text-white rounded-0">
-                    <button class="btn btn-custom" data-bs-toggle="modal" style="color: #000000; background: rgba(255, 255, 255, 0.05); " data-bs-target="#contactModal">
-                        X
-                    </button>
+                <div class="modal-header bg-dark text-white rounded-0 border-0">
+                    <h5 class="modal-title text-white fw-bold">Entre em Contato</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body p-4">
                     <form id="contactForm">
@@ -409,6 +830,16 @@
                             <input type="email" class="form-control rounded-0" required>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label text-muted small">Serviço de Interesse</label>
+                            <select class="form-select rounded-0" id="serviceSelect">
+                                <option value="">Selecione um serviço</option>
+                                <option>Desenvolvimento de Sites</option>
+                                <option>Criação de Wireframes</option>
+                                <option>Manutenção Completa</option>
+                                <option>SEO & Marketing</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label text-muted small">Sua Mensagem</label>
                             <textarea class="form-control rounded-0" rows="4" required></textarea>
                         </div>
@@ -419,63 +850,70 @@
         </div>
     </div>
 
+    <!-- ===================== FOOTER ===================== -->
     <footer class="bg-white border-top">
-    <div class="container py-5">
-        <div class="row gy-4">
-            <div class="col-lg-3 col-md-6">
-                <h4 class="fw-bold mb-4 text-dark">T1B-3</h4>
-                <p class="text-muted small mb-4">
-                    Agência de criação focada em marcas consistentes, sites de alta performance e resultados escaláveis.
-                </p>
-                <div class="footer-social">
-                    <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/t1b_3_digitalstudio/" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
-                    <a href="https://x.com/t1b_332306" class="me-3"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <div class="container py-5">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <img src="images/t1b.png" alt="T1B-3" style="width: 80px;" class="mb-3">
+                    <p class="text-muted small mb-4">Agência de criação focada em marcas consistentes, sites de alta performance e resultados escaláveis.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/t1b_3_digitalstudio/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com/t1b_332306"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4 text-dark">Navegação</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-dark">Contato</h5>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-geo-alt text-primary me-2 mt-1"></i>
+                            <span>Av. Marechal Tito, 1500<br>São Miguel Paulista, SP<br>CEP: 08115-100</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <span>+55 (11) 99999-9999</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-envelope text-primary me-2"></i>
+                            <span>t1b3digitalstudio@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4 text-dark">Localização</h5>
+                    <div class="map-wrapper shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.940562512967!2d-46.4385966!3d-23.4986561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63e230f30501%3A0xc5490407f0f0c05a!2sAv.%20Mal.%20Tito%2C%201500%20-%20S%C3%A3o%20Miguel%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008115-100!5e0!3m2!1spt-BR!2sbr!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold mb-4 text-dark">Contato</h5>
-                <ul class="list-unstyled small text-muted">
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="bi bi-geo-alt text-primary me-2 mt-1"></i>
-                        <span>Av. Marechal Tito, 1500<br>São Miguel Paulista, SP<br>CEP: 08115-100</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-telephone text-primary me-2"></i>
-                        <span>+55 (11) 99999-9999</span>
-                    </li>
-                    <li class="d-flex align-items-center">
-                        <i class="bi bi-envelope text-primary me-2"></i>
-                        <span>t1b3digitalstudio@gmail.com</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-6">
-                <h5 class="fw-bold mb-4 text-dark">Localização</h5>
-                <div class="map-wrapper shadow-sm">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.940562512967!2d-46.4385966!3d-23.4986561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63e230f30501%3A0xc5490407f0f0c05a!2sAv.%20Mal.%20Tito%2C%201500%20-%20S%C3%A3o%20Miguel%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008115-100!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
-                        width="100%" 
-                        height="200" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+            <div class="row border-top mt-5 pt-4">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 T1B-3 Digital Studio. Todos os direitos reservados. | Desenvolvido com 💙 pela T1B-3</p>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <div class="row border-top mt-5 pt-4">
-            <div class="col-12 text-center text-muted small">
-                <p class="mb-0">&copy; 2026 T1B-3 Digital Studio. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </div>
-</footer>
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
